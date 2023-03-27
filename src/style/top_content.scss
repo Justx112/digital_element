@@ -1,0 +1,70 @@
+/* stylelint-disable selector-class-pattern */
+/* stylelint-disable function-no-unknown */
+/* stylelint-disable at-rule-no-unknown */
+
+$base-container: 1366;
+
+@function response_size($initialSize) {
+  @return calc($initialSize/$base-container * 100vw);
+}
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $base-container: $base-container - 320;
+
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$base-container}));
+}
+
+.discription {
+  background-image: url('../media/main_content/back_ground.svg');
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: response_size(612) response_size(681);
+  margin-right: calc(50/1336 * 100vw);
+  height: response_size(681);
+  margin-bottom: 40px;
+
+  &__header {
+    line-height: response_size(74);
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+    padding-top: response_size(100);
+    font-size: max(calc(64/($base-container)*100vw), 25px);
+  }
+
+  &__container {
+    margin-left: response_size(212);
+  }
+
+  &__text {
+    margin-top: response_size(32);
+    line-height: max(response_size(26), 18px);
+    letter-spacing: 0.05em;
+    color: #1F3F68;
+    opacity: 0.6;
+    width: response_size(425);
+    font-size: max(calc(16/($base-container)*100vw), 16px);
+  }
+
+  &__button {
+    margin-top: response_size(71);
+  }
+}
+
+@media screen and (max-width:560px) {
+  .discription{
+    background-image: none;
+    margin-bottom: 35px;
+    height: auto;
+
+    &__container{
+      margin: 0 auto;
+      width: 340px;
+      text-align: justify;
+    }
+
+    &__text{
+      width: 100%;
+    }
+  }
+}

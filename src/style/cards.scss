@@ -1,0 +1,152 @@
+/* stylelint-disable selector-class-pattern */
+.we_do {
+  margin-bottom: 212px;
+
+  &__container {
+    max-width: 940px;
+    height: 1182px;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column wrap-reverse;
+    flex-direction: column;
+    align-items: end;
+  }
+
+  &__header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 36px;
+    line-height: 46px;
+    letter-spacing: 0.05em;
+    color: #316099;
+    width: 358px;
+  }
+}
+
+.card {
+  width: 380px;
+  box-shadow: 5px 20px 50px rgb(16 112 177 / 20%);
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  &:first-child {
+    margin-bottom: 100px;
+  }
+
+  &>* {
+    padding-left: 48px;
+  }
+
+  &__image {
+    position: absolute;
+    top: 48px;
+    margin: 0 auto;
+  }
+
+  &__header {
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    color: #1F3F68;
+    margin-top: 236px;
+    width: 257px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    color: #1F3F68;
+    opacity: 0.6;
+    margin-top: 16px;
+    width: 284px;
+  }
+
+  &__link_container {
+    display: flex;
+    width: 128px;
+    justify-content: space-between;
+    margin-top: 32px;
+    margin-bottom: 48px;
+    text-decoration: none;
+  }
+
+  &__link_text {
+    font-size: 14px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    color: #5A98D0;
+  }
+
+}
+
+.card__image.special {
+  top: -12px;
+}
+
+.special_card.card {
+  align-self: start;
+  margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .we_do {
+    &__container {
+      max-width: 700px;
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      justify-content: center;
+      align-items: center;
+
+      & > * {
+        margin-bottom: 50px;
+      }
+    }
+
+    &__header{
+      position: static;
+      order: -1;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .we_do {
+    &__container {
+      width: 350px;
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      justify-content: center;
+      align-items: center;
+
+      &>* {
+        margin-bottom: 50px;
+      }
+    }
+
+    &__header {
+      position: static;
+      order: -1;
+      margin-bottom: 25px;
+      font-size: 18px;
+      width: 350px;
+      line-height: 20px;
+    }
+  }
+
+  .card{
+    width: 340px;
+
+    &>*{
+      padding-left: 30px;
+    }
+  }
+}

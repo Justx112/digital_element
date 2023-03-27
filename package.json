@@ -1,0 +1,32 @@
+{
+  "name": "first_element",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode=production",
+    "start": "webpack serve --open --mode=development"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^6.7.3",
+    "eslint": "^8.36.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-webpack-plugin": "^4.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "postcss": "^8.4.21",
+    "postcss-loader": "^7.1.0",
+    "sass": "^1.60.0",
+    "sass-loader": "^13.2.1",
+    "style-loader": "^3.3.2",
+    "stylelint-config-standard-scss": "^7.0.1",
+    "stylelint-webpack-plugin": "^4.1.0",
+    "webpack": "^5.76.3",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.1"
+  }
+}

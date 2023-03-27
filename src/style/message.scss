@@ -1,0 +1,29 @@
+.message{
+  color: white;
+  position: fixed;
+  width: 320px;
+  height: 40px;
+  text-align: center;
+  top: 60px;
+  transform: scale(0, 0);
+  left: calc(50% - 320px/2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  animation: move 5s ease 1 forwards;
+}
+
+@keyframes move {
+  0% {
+    transform: scale(0, 0);
+  }
+
+  50% {
+    transform: scale(1, 1);
+  }
+
+  100% {
+    transform: scale(0, 0);
+  }
+}

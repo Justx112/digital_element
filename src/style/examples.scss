@@ -1,0 +1,121 @@
+.example {
+  height: 100%;
+
+  &__container {
+    max-width: 940px;
+    margin: 0 auto;
+    padding-top: 96px;
+  }
+
+  &__text_container {
+    display: grid;
+    grid-template-columns: min(30vw, 223px) min(60vw, 540px);
+    column-gap: min(7vw, 100px);
+    margin-bottom: 111px;
+  }
+
+  &__header {
+    font-size: 36px;
+    line-height: 46px;
+    letter-spacing: 0.05em;
+    color: rgb(255 255 255);
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    color: rgb(255 255 255);
+    opacity: 0.6;
+  }
+
+  &__logo_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 128px);
+    margin-bottom: 125px;
+  }
+
+  &__cell {
+    border-left: 1px solid #FFFF;
+    border-bottom: 1px solid #FFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    line-height: 46px;
+    letter-spacing: 0.02em;
+    color: #FFFF;
+    text-align: center;
+
+    &:nth-child(1) {
+      border-left: none;
+    }
+
+    &:nth-child(5) {
+      border-left: none;
+    }
+
+    &:nth-child(n+5) {
+      border-bottom: none;
+    }
+
+    &:last-child {
+      background-color: #1f3f683d;
+    }
+  }
+}
+
+.background {
+  background: #5A98D0;
+  border-radius: 15vw 0 0;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .example {
+    &__container {
+      max-width: 768px;
+    }
+
+    &__text_container {
+      grid-template-rows: 92px 80px;
+      grid-template-columns: none;
+      margin-bottom: 30px;
+    }
+
+    &__logo_container {
+      grid-template-rows: repeat(4, 128px);
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &__cell {
+      &:nth-child(n) {
+        border-bottom: 1px solid #ffff;
+        border-left: 1px solid #ffff;
+      }
+
+
+      &:nth-child(odd) {
+        border-left: none;
+      }
+
+      &:nth-child(n+6) {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .background{
+    max-width: 560px;
+  }
+
+  .example{
+    &__container{
+      max-width: 340px;
+    }
+  }
+
+}

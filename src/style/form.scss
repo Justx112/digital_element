@@ -1,0 +1,109 @@
+.form {
+  width: 80vw;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: 36px repeat(2, 110px) 182px 110px;
+  grid-template-columns: 80%;
+  background-color: #ffff;
+  row-gap: 32px;
+  justify-content: center;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+
+  &__container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0 0 0 / 40%);
+    z-index: 10000;
+    top: 0;
+    left: 0;
+  }
+
+  &__input_container {
+    float: left;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  &__label {
+    display: block;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+    opacity: 0.8;
+    margin-bottom: 8px;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    border: 1px solid #356EAD;
+    border-radius: 10px;
+    height: 72px;
+    box-sizing: border-box;
+    padding-left: 3vw;
+    padding-top: 21px;
+    padding-bottom: 21px;
+
+    &::-webkit-input-placeholder {
+      font-size: 16px;
+      line-height: 30px;
+      letter-spacing: 0.04em;
+      color: #1F3F68;
+      opacity: 0.2;
+    }
+
+    &:-moz-placeholder {
+      font-size: 16px;
+      line-height: 30px;
+      letter-spacing: 0.04em;
+      color: #1F3F68;
+      opacity: 0.2;
+    }
+
+    ::-moz-placeholder {
+      font-size: 16px;
+      line-height: 30px;
+      letter-spacing: 0.04em;
+      color: #1F3F68;
+      opacity: 0.2;
+    }
+
+    :-ms-input-placeholder {
+      font-size: 16px;
+      line-height: 30px;
+      letter-spacing: 0.04em;
+      color: #1F3F68;
+      opacity: 0.2;
+    }
+  }
+
+  &__button {
+    background: #5A98D0;
+    box-shadow: 5px 20px 50px rgb(16 112 177 / 20%);
+    border-radius: 10px;
+    height: 72px;
+    border: none;
+  }
+
+  &__header {
+    display: block;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+    margin-right: 0;
+    text-align: start;
+  }
+}
+
+.textarea {
+  height: 144px;
+  resize: none;
+  overflow: hidden;
+}
